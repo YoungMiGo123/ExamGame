@@ -1,0 +1,48 @@
+﻿@page
+@model ExamTest.Pages.ManageCourseModel
+@{
+    ViewData["Title"] = "ManageCourse";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Our Exam Center</h1>
+    <p>Select any of our courses below, to start!</p>
+</div>
+
+<div class="row">
+    <div class="col-4" style="text-align:center;">
+        <div class="card" style="width:300px">
+            <img class="card-img-top" src="~/images/images.png" alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">Story Exam (Text)</h4>
+                <p class="card-text">Simple text based problems</p>
+                <a href="/AddQuestion?id=text" class="btn btn-primary">Add Questions </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-4" style="text-align:center;">
+        <div class="card" style="width:300px">
+            <img class="card-img-top" src="~/images/images (2).jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">Math Exam (Numbers)</h4>
+                <p class="card-text">Simple math problems</p>
+                <a href="/AddQuestion?id=numbers" class="btn btn-primary">Add Questions </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-4" style="text-align:center;">
+        <div class="card" style="width:300px">
+            <img class="card-img-top" src="~/images/images (2).jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+                <h4 class="card-title">Binary Exam (Numbers)</h4>
+                <p class="card-text">A question that has only 2 answers, usually yes or no.</p>
+                <a href="/AddQuestion?id=binary" class="btn btn-primary">Add Questions </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<a href="/addcourse">Add Course</a>

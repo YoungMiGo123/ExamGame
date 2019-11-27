@@ -1,0 +1,36 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="container">
+    <div class="text-center">
+        <h1 class="display-4">Welcome To Botza Exams</h1>
+        <p>An Online platform, designed to make exams simple!</p>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 " style="text-align:center">
+            <div class="card" style="width:100%">
+                <img class="card-img-top" src="~/images/images.png" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Instructor</h4>
+                    <p class="card-text">Manage Courses</p>
+                    <a href="/managecourse" class="btn btn-primary">Start </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6" style="text-align:center;">
+            <div class="card" style="width:100%">
+                <img class="card-img-top" src="~/images/images (2).jpg" alt="Card image" style="width:100%">
+                <div class="card-body">
+                    <h4 class="card-title">Student</h4>
+                    <p class="card-text">Take Course</p>
+                    <a href="/courses" class="btn btn-primary">Start </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

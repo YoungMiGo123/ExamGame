@@ -1,0 +1,57 @@
+﻿@page
+@model ExamTest.Pages.TakeCourseModel
+@{
+    ViewData["Title"] = "TakeCourse";
+}
+
+<h1>Questions </h1>
+@{var questions = @Model.course.exams; }
+@if (Model.ExamType == "text")
+{
+    <form method="post">
+        @foreach (var q in questions)
+        {
+            <div class="form-group">
+                <label for="exampleFormControlInput1">@q.question</label>
+                <input type="text" class="form-control" name="text" id="exampleFormControlInput1">
+            </div>
+        }
+        <input type="hidden" asp-for="ExamType" value="@Model.ExamType" />
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+}
+@if (Model.ExamType == "numbers")
+{
+
+    <form method="post">
+        @foreach (var q in questions)
+        {
+            <div class="form-group">
+                <label for="exampleFormControlInput1">@q.question</label>
+                <input type="text" class="form-control" name="numbers" id="exampleFormControlInput1">
+            </div>
+        }
+        <input type="hidden" asp-for="ExamType" value="@Model.ExamType" />
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+}
+@if (Model.ExamType == "binary")
+{
+    <form method="post">
+        @foreach (var q in questions)
+        {
+
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">@q.question</label>
+                <select class="form-control" id="exampleFormControlSelect1" name="binary">
+                    <option>0</option>
+                    <option>1</option>
+
+                </select>
+            </div>
+
+        }
+        <input type="hidden" asp-for="ExamType" value="@Model.ExamType" />
+        <button type="submit" class="btn-primary">Submit</button>
+    </form>
+}
